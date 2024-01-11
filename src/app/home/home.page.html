@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Citas
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/configuraciones']">
+        <ion-icon icon="settings-outline" slot="icon-only" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fabe-button color="primary" [routerLink]="['/gestion-citas']">
+    <ion-icon 
+    icon="add-circle" 
+    slot="icon-only" 
+    style="font-size: 40px;" 
+    color="primary"
+    >
+    </ion-icon>
+  </ion-fabe-button>
+</ion-fab>
+
+<ion-content [fullscreen]="true" >
+  <app-citas 
+  [citaAleatoria]="citaAleatoria" 
+  [borrarCitasEnInicio]="borrarCitasEnInicio">
+</app-citas>
+</ion-content>
+  
+
+
+
+

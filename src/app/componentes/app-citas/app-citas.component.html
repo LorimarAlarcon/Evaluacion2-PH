@@ -1,0 +1,26 @@
+<div style="height: 80%; display: flex; align-items: center; justify-content: center;">
+  <ion-card color="light" *ngIf="citaAleatoria" >
+      <div>
+        <ion-text color="primary" [style.fontSize]="'1em'">
+        <p
+        class="frase" 
+        style="margin-left: 10px; margin-right: 10px;">
+        {{citaAleatoria.frase}}</p>
+      </ion-text>
+      </div>
+      <div class="ion-text-end">
+        <ion-text [style.fontSize]="'0.8em'">
+        <p
+        class="autor" 
+        style="margin-right: 10px;">
+        {{citaAleatoria.autor}}</p>
+      </ion-text>
+      </div>
+  </ion-card>
+  <ion-card color="light" *ngIf="!citaAleatoria" >
+    <ion-text color="primary" [style.fontSize]="'1em'"> No hay cita disponible en este momento.</ion-text>
+  </ion-card>
+</div>
+
+
+

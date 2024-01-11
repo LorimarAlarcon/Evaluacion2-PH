@@ -1,0 +1,22 @@
+.cita-item {
+  display: grid;
+}
+
+.frase {
+  font-size: 0.9em; /* Tamaño de la letra para la frase */
+  
+}
+
+.autor {
+  font-size: 0.7em; /* Tamaño de la letra para el autor */
+  font-weight: lighter;
+  text-align: right;
+  color: #777; /* Color más claro para el autor */
+}
+
+.trash-button {
+  width: 80px;
+  height: 100%;
+  justify-self: flex-end;
+  font-size: 1em;
+}

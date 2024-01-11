@@ -1,0 +1,48 @@
+<br>
+  <ion-card-subtitle color= "dark"> 
+    <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crea una nueva cita</b>
+  </ion-card-subtitle>
+    <ion-card-content>
+      <ion-item >
+        <ion-input 
+          [(ngModel)]="nuevaCita.frase" 
+          required="required"
+          minlength="5" 
+          #fraseInput="ngModel" 
+          label="Frase"> 
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input  
+          [(ngModel)]="nuevaCita.autor"
+          required="required"
+          minlength="2"
+          #autorInput="ngModel"
+          label="Autor"
+          placeholder="Mahatma Gandhi">
+        </ion-input>
+      </ion-item>
+    <ion-button 
+        [disabled]="!fraseInput.valid || !autorInput.valid" 
+        (click)="onClick()"
+        fill="clear" 
+        slot="end"
+        aria-label="Botón para agregar cita">
+      <ion-label style="font-size: smaller;">AGREGAR
+      <ion-icon slot="icon-only" name="add-outline" />
+      </ion-label>
+    </ion-button>    
+    <ion-item color="light" lines="none">
+      <ion-text
+      [hidden]="fraseInput.valid || fraseInput.pristine"
+      color = "danger">
+      Escriba una frase con al menos 5 caracteres
+    </ion-text>
+    <br>
+      <ion-text
+      [hidden]="autorInput.valid || autorInput.pristine"
+      color = "danger">
+      El autor debe tener un mínimo de 2 caracteres
+    </ion-text>
+    </ion-item>   
+  </ion-card-content>
